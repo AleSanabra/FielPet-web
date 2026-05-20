@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -46,46 +45,117 @@
             margin: auto;
         }
 
-        /* HEADER */
+/* HEADER */
 
-        header {
-            padding: 18px 0;
-            background: #00b67a;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
+header {
+    padding: 18px 0;
+    background: #00b67a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
+.header-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    transition: all 0.3s ease;
+}
 
-        .header-logo img {
-            height: 65px;
-            object-fit: contain;
-        }
+/* LOGO FIELPET */
 
-        .header-title {
-            text-align: center;
-            color: white;
-        }
+.header-title {
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+}
 
-        .header-title h1 {
-            font-size: 2.1rem;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 5px;
-        }
+.header-title img {
+    height: 95px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
 
-        .header-title span {
-            font-size: 1rem;
-            font-weight: 400;
-            opacity: 0.95;
-        }
+.header-title span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* LOGO PIOTROWSKY */
+
+.header-logo {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.header-logo img {
+    height: 55px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
+}
+
+/* HEADER COMPACTO AL HACER SCROLL */
+
+header.scrolled {
+    padding: 8px 0;
+}
+
+header.scrolled .header-content {
+    min-height: 55px;
+}
+
+header.scrolled .header-title img {
+    height: 55px;
+}
+
+header.scrolled .header-title span {
+    display: none;
+}
+
+/* ESCONDER LOGO SEGURO EN SCROLL MOBILE */
+
+@media(max-width: 768px) {
+
+    header.scrolled .header-logo {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    header {
+        padding: 15px 0;
+    }
+
+    .header-title img {
+        height: 75px;
+    }
+
+    .header-logo img {
+        height: 45px;
+    }
+
+}
 
         /* HERO */
 
@@ -382,21 +452,76 @@
             }
         }
 
-        @media(max-width: 768px) {
+/* RESPONSIVE MOBILE */
 
-            .header-content {
-                flex-direction: column;
-            }
+@media(max-width: 768px) {
 
-            .header-logo img {
-                height: 50px;
-            }
+header {
+    padding: 10px 0;
+}
 
-            .header-title h1 {
-                font-size: 1.6rem;
-            }
+.header-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-height: auto;
+}
 
-        }
+/* FIELPET */
+
+.header-title {
+    text-align: center;
+}
+
+.header-title img {
+    height: 60px;
+}
+
+.header-title span {
+    font-size: 0.85rem;
+}
+
+/* LOGO PIOTROWSKY */
+
+.header-logo {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+}
+
+.header-logo img {
+    height: 32px;
+}
+
+/* HEADER COMPACTO */
+
+header.scrolled {
+    padding: 6px 0;
+}
+
+header.scrolled .header-content {
+    gap: 0;
+}
+
+header.scrolled .header-title img {
+    height: 45px;
+}
+
+header.scrolled .header-title span {
+    display: none;
+}
+
+/* OCULTAR LOGO SEGURO */
+
+header.scrolled .header-logo {
+    display: none;
+}
+
+}
 
         @media(max-width: 576px) {
 
@@ -438,37 +563,40 @@
 
 <body>
 
-    <!-- HEADER -->
+ <!-- HEADER -->
 
-    <header>
+<header>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="header-content">
+        <div class="header-content">
 
-                <!-- LOGO FIELPET -->
-                <div class="header-logo">
-                    <img src="/img/logo_bbva.png" alt="BBVA">
-                </div>
+            <!-- LOGO FIELPET -->
+            <div class="header-title">
 
-                <!-- TITULO -->
-                <div class="header-title">
-                    <img src="/img/logo_fielpet.png" alt="FielPet"> <br>
-                    <span>Puerto Madryn</span>
-                </div>
+                <img src="/img/logo_fielpet.png" alt="FielPet">
 
-                <!-- LOGO PIOTROWSKY -->
-                <div class="header-logo">
-                    <a href="https://piotrowskyseguros.com.ar/">
-                    <img src="/img/logo_seguro.webp"  alt="Seguros Piotrowsky">
-                    </a>
-                </div>
+                <span>Puerto Madryn</span>
+
+            </div>
+
+            <!-- LOGO PIOTROWSKY -->
+            <div class="header-logo">
+
+                <a href="https://piotrowskyseguros.com.ar/" target="_blank">
+
+                    <img src="/img/logo_seguro.webp"
+                        alt="Seguros Piotrowsky">
+
+                </a>
 
             </div>
 
         </div>
 
-    </header>
+    </div>
+
+</header>
 
     <!-- HERO -->
 
@@ -495,15 +623,12 @@
                     <div class="hero-buttons">
 
                         <!-- CAMBIAR URL -->
-                        <a href="https://fielpet.com/v/Ppiotrowsky"
-                            class="btn btn-primary">
+                        <a href="https://fielpet.com/v/Ppiotrowsky" class="btn btn-primary">
                             Cotizar Ahora
                         </a>
 
                         <!-- CAMBIAR NUMERO -->
-                        <a href="https://wa.me/5492804300220"
-                            class="btn btn-secondary"
-                            target="_blank">
+                        <a href="https://wa.me/5492804300220" class="btn btn-secondary" target="_blank">
                             Hablar por WhatsApp
                         </a>
 
@@ -513,7 +638,7 @@
 
                 <div class="hero-image fade-up">
 
-                    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop"
+                    <img src="/img/mascota3.png"
                         alt="Mascota">
 
                 </div>
@@ -609,8 +734,7 @@
             </p>
 
             <!-- CAMBIAR URL -->
-            <a href="#"
-                class="btn btn-primary">
+            <a href="#" class="btn btn-primary">
                 Cotizar Seguro
             </a>
 
@@ -638,8 +762,7 @@
 
                 <div class="branch-card fade-up">
 
-                    <img src="/img/sucursal_centro.webp"
-                        alt="Sucursal Centro">
+                    <img src="/img/sucursal_centro.jpeg" alt="Sucursal Centro">
 
                     <div class="branch-content">
 
@@ -663,8 +786,7 @@
 
                 <div class="branch-card fade-up">
 
-                    <img src="/img/sucursal_norte.webp"
-                        alt="Sucursal Norte">
+                    <img src="/img/sucursal_norte.webp" alt="Sucursal Norte">
 
                     <div class="branch-content">
 
@@ -709,9 +831,7 @@
     <!-- BOTON WHATSAPP -->
 
     <!-- CAMBIAR NUMERO -->
-    <a href="https://wa.me/5492804300220"
-        class="whatsapp"
-        target="_blank">
+    <a href="https://wa.me/5492804300220" class="whatsapp" target="_blank">
 
         💬
 
@@ -720,25 +840,41 @@
     <script>
 
         // ANIMACIONES SCROLL
-
+    
         const fadeElements = document.querySelectorAll('.fade-up');
-
+    
         const observer = new IntersectionObserver((entries) => {
-
+    
             entries.forEach(entry => {
-
+    
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
-
+    
             });
-
+    
         }, {
             threshold: 0.2
         });
-
+    
         fadeElements.forEach(el => observer.observe(el));
-
+    
+    
+    
+        // HEADER COMPACTO
+    
+        const header = document.querySelector('header');
+    
+        window.addEventListener('scroll', () => {
+    
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+    
+        });
+    
     </script>
 
 </body>
