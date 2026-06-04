@@ -6,6 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FielPet Puerto Madryn | Seguros Piotrowsky</title>
 
+    <!--Google (SEO)-->
+    <meta name="description"
+        content="Seguro para mascotas en Puerto Madryn. Protegé a tu perro o gato con cobertura veterinaria, asistencia y atención personalizada de Seguros Piotrowsky.">
+
+    <meta name="keywords"
+        content="seguro para mascotas, seguro perro, seguro gato, seguro veterinario, fielpet, puerto madryn, seguros piotrowsky">
+
+    <link rel="canonical" href="https://<%= dominio %>">
+
+    <!-- DATOS ESTRUCTURADOS (Schema.org) -->
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "InsuranceAgency",
+              "name": "Seguros Piotrowsky",
+              "url": "https://mascotaspiotrowsky.com.ar",
+              "logo": "https://mascotaspiotrowsky.com.ar/img/logo_seguro.webp",
+              "telephone": "+5492804300220",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Julio A. Roca 795",
+                "addressLocality": "Puerto Madryn",
+                "addressRegion": "Chubut",
+                "addressCountry": "AR"
+              }
+            }
+            </script>
+
+    <!--Open Graph (Facebook, WhatsApp, LinkedIn)-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seguro para Mascotas FielPet">
+    <meta property="og:description" content="Protegé a tu mascota con cobertura veterinaria y asistencia integral.">
+
+    <meta property="og:image" content="https://<%= dominio %>/img/logo_fielpet2.png">
+
+    <meta property="og:url" content="https://<%= dominio %>">
+
+    <meta property="og:site_name" content="Seguros Piotrowsky">
+
+    <!--Twitter/X Cards-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seguro para Mascotas FielPet">
+    <meta name="twitter:description" content="Cobertura veterinaria y protección integral para tu mascota.">
+    <meta name="twitter:image" content="https://<%= dominio %>/img/logo_fielpet2.png">
+
+    <!--favicon / Icono-->
+    <link rel="icon" href="/img/favicon.ico">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -45,117 +94,117 @@
             margin: auto;
         }
 
-/* HEADER */
+        /* HEADER */
 
-header {
-    padding: 18px 0;
-    background: #00b67a;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
+        header {
+            padding: 18px 0;
+            background: #00b67a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
 
-.header-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90px;
-    transition: all 0.3s ease;
-}
+        .header-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            transition: all 0.3s ease;
+        }
 
-/* LOGO FIELPET */
+        /* LOGO FIELPET */
 
-.header-title {
-    text-align: center;
-    color: white;
-    transition: all 0.3s ease;
-}
+        .header-title {
+            text-align: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
 
-.header-title img {
-    height: 95px;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
+        .header-title img {
+            height: 95px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
 
-.header-title span {
-    display: block;
-    margin-top: 5px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: white;
-    transition: all 0.3s ease;
-}
+        .header-title span {
+            display: block;
+            margin-top: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            transition: all 0.3s ease;
+        }
 
-/* LOGO PIOTROWSKY */
+        /* LOGO PIOTROWSKY */
 
-.header-logo {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-}
+        .header-logo {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
 
-.header-logo img {
-    height: 55px;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
+        .header-logo img {
+            height: 55px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
 
-.header-logo img:hover {
-    transform: scale(1.05);
-}
+        .header-logo img:hover {
+            transform: scale(1.05);
+        }
 
-/* HEADER COMPACTO AL HACER SCROLL */
+        /* HEADER COMPACTO AL HACER SCROLL */
 
-header.scrolled {
-    padding: 8px 0;
-}
+        header.scrolled {
+            padding: 8px 0;
+        }
 
-header.scrolled .header-content {
-    min-height: 55px;
-}
+        header.scrolled .header-content {
+            min-height: 55px;
+        }
 
-header.scrolled .header-title img {
-    height: 55px;
-}
+        header.scrolled .header-title img {
+            height: 55px;
+        }
 
-header.scrolled .header-title span {
-    display: none;
-}
+        header.scrolled .header-title span {
+            display: none;
+        }
 
-/* ESCONDER LOGO SEGURO EN SCROLL MOBILE */
+        /* ESCONDER LOGO SEGURO EN SCROLL MOBILE */
 
-@media(max-width: 768px) {
+        @media(max-width: 768px) {
 
-    header.scrolled .header-logo {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+            header.scrolled .header-logo {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
 
-}
+        }
 
-/* RESPONSIVE */
+        /* RESPONSIVE */
 
-@media(max-width: 768px) {
+        @media(max-width: 768px) {
 
-    header {
-        padding: 15px 0;
-    }
+            header {
+                padding: 15px 0;
+            }
 
-    .header-title img {
-        height: 75px;
-    }
+            .header-title img {
+                height: 75px;
+            }
 
-    .header-logo img {
-        height: 45px;
-    }
+            .header-logo img {
+                height: 45px;
+            }
 
-}
+        }
 
         /* HERO */
 
@@ -235,6 +284,7 @@ header.scrolled .header-title span {
             width: 100%;
             border-radius: 30px;
             box-shadow: var(--shadow);
+            transition: opacity 0.8s ease;
         }
 
         @keyframes float {
@@ -360,6 +410,7 @@ header.scrolled .header-title span {
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: 0.3s ease;
+
         }
 
         .branch-card:hover {
@@ -385,6 +436,12 @@ header.scrolled .header-title span {
             color: var(--gray);
             margin-bottom: 10px;
             line-height: 1.6;
+        }
+
+        .branch-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         /* FOOTER */
@@ -452,76 +509,76 @@ header.scrolled .header-title span {
             }
         }
 
-/* RESPONSIVE MOBILE */
+        /* RESPONSIVE MOBILE */
 
-@media(max-width: 768px) {
+        @media(max-width: 768px) {
 
-header {
-    padding: 10px 0;
-}
+            header {
+                padding: 10px 0;
+            }
 
-.header-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    min-height: auto;
-}
+            .header-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                min-height: auto;
+            }
 
-/* FIELPET */
+            /* FIELPET */
 
-.header-title {
-    text-align: center;
-}
+            .header-title {
+                text-align: center;
+            }
 
-.header-title img {
-    height: 60px;
-}
+            .header-title img {
+                height: 60px;
+            }
 
-.header-title span {
-    font-size: 0.85rem;
-}
+            .header-title span {
+                font-size: 0.85rem;
+            }
 
-/* LOGO PIOTROWSKY */
+            /* LOGO PIOTROWSKY */
 
-.header-logo {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-}
+            .header-logo {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+            }
 
-.header-logo img {
-    height: 32px;
-}
+            .header-logo img {
+                height: 32px;
+            }
 
-/* HEADER COMPACTO */
+            /* HEADER COMPACTO */
 
-header.scrolled {
-    padding: 6px 0;
-}
+            header.scrolled {
+                padding: 6px 0;
+            }
 
-header.scrolled .header-content {
-    gap: 0;
-}
+            header.scrolled .header-content {
+                gap: 0;
+            }
 
-header.scrolled .header-title img {
-    height: 45px;
-}
+            header.scrolled .header-title img {
+                height: 45px;
+            }
 
-header.scrolled .header-title span {
-    display: none;
-}
+            header.scrolled .header-title span {
+                display: none;
+            }
 
-/* OCULTAR LOGO SEGURO */
+            /* OCULTAR LOGO SEGURO */
 
-header.scrolled .header-logo {
-    display: none;
-}
+            header.scrolled .header-logo {
+                display: none;
+            }
 
-}
+        }
 
         @media(max-width: 576px) {
 
@@ -559,44 +616,45 @@ header.scrolled .header-logo {
             transform: translateY(0);
         }
     </style>
+
 </head>
 
 <body>
 
- <!-- HEADER -->
+    <script>
+        console.log(imagenesMascotas);
+    </script>
+    <!-- HEADER -->
 
-<header>
+    <header>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="header-content">
+            <div class="header-content">
 
-            <!-- LOGO FIELPET -->
-            <div class="header-title">
+                <!-- LOGO FIELPET -->
+                <div class="header-title">
 
-                <img src="/img/logo_fielpet.png" alt="FielPet">
+                    <img src="/img/logo_fielpetB.png" alt="FielPet">
 
-                <span>Puerto Madryn</span>
+                </div>
 
-            </div>
+                <!-- LOGO PIOTROWSKY -->
+                <div class="header-logo">
 
-            <!-- LOGO PIOTROWSKY -->
-            <div class="header-logo">
+                    <a href="https://piotrowskyseguros.com.ar/" target="_blank">
 
-                <a href="https://piotrowskyseguros.com.ar/" target="_blank">
+                        <img src="/img/logo_seguro.webp" alt="Seguros Piotrowsky">
 
-                    <img src="/img/logo_seguro.webp"
-                        alt="Seguros Piotrowsky">
+                    </a>
 
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</header>
+    </header>
 
     <!-- HERO -->
 
@@ -628,7 +686,7 @@ header.scrolled .header-logo {
                         </a>
 
                         <!-- CAMBIAR NUMERO -->
-                        <a href="https://wa.me/5492804300220" class="btn btn-secondary" target="_blank">
+                        <a href="https://wa.me/<%= whatsapp %>" class="btn btn-secondary" target="_blank">
                             Hablar por WhatsApp
                         </a>
 
@@ -638,8 +696,8 @@ header.scrolled .header-logo {
 
                 <div class="hero-image fade-up">
 
-                    <img src="/img/mascota3.png"
-                        alt="Mascota">
+                    <img id="heroMascota" src='<%= imagenes[0] %>' alt="Seguro para mascotas FielPet en Puerto Madryn"
+                        loading="lazy">
 
                 </div>
 
@@ -761,50 +819,46 @@ header.scrolled .header-logo {
             <div class="branches-grid">
 
                 <div class="branch-card fade-up">
+                    <a href="https://maps.app.goo.gl/MgYshnKjWZapz8Ys5" target="_blank">
 
-                    <img src="/img/sucursal_centro.jpeg" alt="Sucursal Centro">
+                        <img src="/img/sucursal_centro.jpeg" alt="Sucursal Centro">
 
-                    <div class="branch-content">
+                        <div class="branch-content">
 
-                        <h3>Sucursal Centro</h3>
+                            <h3>📍 Av. Julio A Roca 795</h3>
 
-                        <p>
-                            📍 Av. Julio A Roca 795 - Puerto Madryn
-                        </p>
+                            <p>
+                                🕒 Lunes a Viernes de 08:30 a 17:00 hs
+                            </p>
 
-                        <p>
-                            🕒 Lunes a Viernes de 08:30 a 17:00 hs
-                        </p>
+                            <p>
+                                Puerto Madryn
+                            </p>
 
-                        <p>
-                            ☎️ (280) 4300220
-                        </p>
 
-                    </div>
-
+                        </div>
+                    </a>
                 </div>
 
                 <div class="branch-card fade-up">
+                    <a href="https://maps.app.goo.gl/njDrNzcQvajreGHZ7" target="_blank">
 
-                    <img src="/img/sucursal_norte.webp" alt="Sucursal Norte">
+                        <img src="/img/sucursal_norte.webp" alt="Sucursal Norte">
 
-                    <div class="branch-content">
+                        <div class="branch-content">
 
-                        <h3>Sucursal Norte</h3>
+                            <h3>📍 Av. Rawson 170</h3>
 
-                        <p>
-                            📍 Av. Guillermo Rawson 170 - Puerto Madryn
-                        </p>
+                            <p>
+                                🕒 Lunes a Viernes de 08:30 a 17:00 hs
+                            </p>
 
-                        <p>
-                            🕒 Lunes a Viernes de 08:30 a 17:00 hs
-                        </p>
+                            <p>
+                                Puerto Madryn
+                            </p>
 
-                        <p>
-                            ☎️ (280) 4605527
-                        </p>
-
-                    </div>
+                        </div>
+                    </a>
 
                 </div>
 
@@ -829,9 +883,7 @@ header.scrolled .header-logo {
     </footer>
 
     <!-- BOTON WHATSAPP -->
-
-    <!-- CAMBIAR NUMERO -->
-    <a href="https://wa.me/5492804300220" class="whatsapp" target="_blank">
+    <a href="https://wa.me/<%= whatsapp %>" class="whatsapp" target="_blank">
 
         💬
 
@@ -840,41 +892,79 @@ header.scrolled .header-logo {
     <script>
 
         // ANIMACIONES SCROLL
-    
+
         const fadeElements = document.querySelectorAll('.fade-up');
-    
+
         const observer = new IntersectionObserver((entries) => {
-    
+
             entries.forEach(entry => {
-    
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
-    
+
             });
-    
+
         }, {
             threshold: 0.2
         });
-    
+
         fadeElements.forEach(el => observer.observe(el));
-    
-    
-    
+
+
+
         // HEADER COMPACTO
-    
+
         const header = document.querySelector('header');
-    
+
         window.addEventListener('scroll', () => {
-    
+
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-    
+
         });
-    
+
+
+        // CARRUCEL FOTOS MASCOTAS
+        const imagenesMascotas = <%- JSON.stringify(imagenes) %>;
+
+        // Mezclar aleatoriamente
+        imagenesMascotas.sort(() => Math.random() - 0.5);
+
+        let indiceMascota = 0;
+        const heroMascota = document.getElementById('heroMascota');
+
+        heroMascota.src = imagenesMascotas[0];
+
+        setInterval(() => {
+
+            heroMascota.style.opacity = '0';
+
+            setTimeout(() => {
+
+                indiceMascota = (indiceMascota + 1) % imagenesMascotas.length;
+                heroMascota.src = imagenesMascotas[indiceMascota];
+
+                heroMascota.animate(
+                    [
+                        { transform: 'scale(1.1)' },
+                        { transform: 'scale(1)' }
+                    ],
+                    {
+                        duration: 1000,
+                        easing: 'ease-out'
+                    }
+                );
+
+                heroMascota.style.opacity = '1';
+
+            }, 400);
+
+        }, 4000);
+
     </script>
 
 </body>
