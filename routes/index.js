@@ -18,11 +18,20 @@ router.get('/', (req, res) => {
   res.render('fielpet', {
     imagenes,
     whatsapp: '5492804300220',
-    dominio: 'mascotaspiotrowsky.com.ar',
+    dominio: 'mascotapiotrowsky.com.ar',
   });
 });
 
+/*
+router.get('/cotizador', (req, res) => {
 
+  // Muestro la pagina
+  res.render('cotizador', {
+    whatsapp: '5492804300220',
+    dominio: 'mascotapiotrowsky.com.ar',
+  });
+});
+*/
 
 // Cualquier otra dirección, manda a index PERO permite archivos estáticos
 router.use((req, res, next) => {
