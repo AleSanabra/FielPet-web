@@ -278,17 +278,15 @@
         .hero-image {
             position: relative;
             animation: float 4s ease-in-out infinite;
-            width: 100%;
-            text-align: center;
         }
 
         .hero-image img {
             width: auto;
-            max-width: min(100%, 420px);
+            max-width: min(100%, 400px);
             height: auto;
-            transition: opacity 0.8s ease;
             border-radius: 30px;
             box-shadow: var(--shadow);
+            transition: opacity 0.8s ease;
         }
 
         @keyframes float {
@@ -583,7 +581,7 @@
             }
 
             .hero-image img {
-                max-width: min(100%, 360px);
+                max-width: min(100%, 300px);
                 border-radius: 22px;
             }
 
@@ -612,7 +610,7 @@
             }
 
             .hero-image img {
-                max-width: min(100%, 300px);
+                max-width: min(100%, 260px);
                 border-radius: 18px;
             }
         }
@@ -679,31 +677,31 @@
 
                     <h2>
 
-                        El <span>amor</span> que le tenés se nota en cómo lo cuidás
+                    El <span>amor</span> que le tenés se nota en cómo lo cuidás
 
-                        <!--      Nosotros lo <span> protegemos </span>  para que vos solo te ocupes de disfrutarlo -->
+                  <!--      Nosotros lo <span> protegemos </span>  para que vos solo te ocupes de disfrutarlo --> 
+                        
+                  <!-- La mejor <span> proteccion </span> para un integrante mas de la familia  -->
 
-                        <!-- La mejor <span> proteccion </span> para un integrante mas de la familia  -->
+                  <!--  Si amas a tu mascota, <span> protegela </span> con el seguro que se merece --> 
+                     
+                  <!-- Protege a quien te da <span> amor </span> todos los dias --> 
 
-                        <!--  Si amas a tu mascota, <span> protegela </span> con el seguro que se merece -->
+                  <!-- Mas <span> mimos </span>  menos preocupaciones -->
 
-                        <!-- Protege a quien te da <span> amor </span> todos los dias -->
+                  <!-- Vos sos el centro de su mundo, cuidalo como se merece-->
 
-                        <!-- Mas <span> mimos </span>  menos preocupaciones -->
+                  <!-- Ellos son Familia <span> protegelos </span>  cuando mas lo necesite -->
+                
+                  <!-- Pensado para quienes mas los <span> aman</span> -->
 
-                        <!-- Vos sos el centro de su mundo, cuidalo como se merece-->
+                    <!-- Porque son parte de tu <span> familia </span> cuidalos con el mejor seguro -->
 
-                        <!-- Ellos son Familia <span> protegelos </span>  cuando mas lo necesite -->
+                  <!-- Porque las visitas al veterinario no avisan, <span> cuidalo </span> con el mejor seguro -->
 
-                        <!-- Pensado para quienes mas los <span> aman</span> -->
+                  <!-- Porque cuidarlo vale la pena, mas <span> tranquilidad </span> para vos y tu mascota -->
 
-                        <!-- Porque son parte de tu <span> familia </span> cuidalos con el mejor seguro -->
-
-                        <!-- Porque las visitas al veterinario no avisan, <span> cuidalo </span> con el mejor seguro -->
-
-                        <!-- Porque cuidarlo vale la pena, mas <span> tranquilidad </span> para vos y tu mascota -->
-
-                        <!-- Para que un susto no sea el doble, 
+                   <!-- Para que un susto no sea el doble, 
                     Porque los imprevistos tambien tiene cuatro patas
                     Te ayudamos con los gastos veterinarios
                     Porque los imprevistos tambien tiene cuatro patas <span> cuidalo </span> con el mejor seguro
@@ -714,7 +712,7 @@
                     <p>
                         Elegí nuestro seguro para mascotas y protegelos de enfermedades, riesgos e imprevistos.
                         <br>
-                        <!-- Con FielPet podés acceder a cobertura veterinaria,
+                    <!-- Con FielPet podés acceder a cobertura veterinaria,
                         asistencia y protección para tu compañero de todos los días.
                         -->
                         Cotizá online o comunicate con un asesor.
@@ -738,9 +736,8 @@
 
                 <div class="hero-image fade-up">
 
-                    <img id="heroMascota"
-                        src='<%= typeof imagenes !== "undefined" && imagenes.length ? imagenes[0] : "/img/logo_fielpet2.png" %>'
-                        alt="Seguro para mascotas FielPet en Puerto Madryn" loading="lazy">
+                    <img id="heroMascota" src='<%= typeof imagenes !== "undefined" && imagenes.length ? imagenes[0] : "/img/logo_fielpet2.png" %>' alt="Seguro para mascotas FielPet en Puerto Madryn"
+                        loading="lazy">
 
                 </div>
 
