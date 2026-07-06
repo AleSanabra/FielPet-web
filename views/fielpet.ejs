@@ -39,17 +39,17 @@
     <meta property="og:title" content="Seguro para Mascotas FielPet">
     <meta property="og:description" content="Protegé a tu mascota con cobertura veterinaria y asistencia integral.">
 
-    <meta property="og:image" content="https://<%= dominio %>/img/logo_fielpet2.png">
+    <meta property="og:image" content="https://<%= dominio %>/img/preview.png">
 
     <meta property="og:url" content="https://<%= dominio %>">
 
-    <meta property="og:site_name" content="Seguros Piotrowsky">
+    <meta property="og:site_name" content="Seguro Mascotas Piotrowsky">
 
     <!--Twitter/X Cards-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Seguro para Mascotas FielPet">
+    <meta name="twitter:title" content="Seguro para Mascotas Piotrowsky Seguros">
     <meta name="twitter:description" content="Cobertura veterinaria y protección integral para tu mascota.">
-    <meta name="twitter:image" content="https://<%= dominio %>/img/logo_fielpet2.png">
+    <meta name="twitter:image" content="https://<%= dominio %>/img/preview.png">
 
     <!--favicon / Icono-->
     <link rel="icon" href="/img/favicon.ico">
@@ -82,6 +82,7 @@
             background: var(--white);
             color: var(--text);
             overflow-x: hidden;
+            padding-top: 126px;
         }
 
         html {
@@ -99,11 +100,14 @@
         header {
             padding: 18px 0;
             background: #00b67a;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            transition: padding 0.35s ease, box-shadow 0.35s ease;
+            will-change: padding;
         }
 
         .header-content {
@@ -112,7 +116,7 @@
             align-items: center;
             justify-content: center;
             min-height: 90px;
-            transition: all 0.3s ease;
+            transition: min-height 0.35s ease, gap 0.35s ease;
         }
 
         /* LOGO FIELPET */
@@ -120,13 +124,14 @@
         .header-title {
             text-align: center;
             color: white;
-            transition: all 0.3s ease;
+            transition: transform 0.35s ease, opacity 0.35s ease;
         }
 
         .header-title img {
             height: 95px;
             object-fit: contain;
-            transition: all 0.3s ease;
+            transition: height 0.35s ease, transform 0.35s ease;
+            will-change: height;
         }
 
         .header-title span {
@@ -135,7 +140,9 @@
             font-size: 1rem;
             font-weight: 500;
             color: white;
-            transition: all 0.3s ease;
+            max-height: 24px;
+            overflow: hidden;
+            transition: opacity 0.25s ease, max-height 0.35s ease, margin-top 0.35s ease;
         }
 
         /* LOGO PIOTROWSKY */
@@ -145,13 +152,14 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.35s ease, max-height 0.35s ease;
+            will-change: opacity, transform;
         }
 
         .header-logo img {
             height: 55px;
             object-fit: contain;
-            transition: all 0.3s ease;
+            transition: height 0.35s ease, transform 0.3s ease;
         }
 
         .header-logo img:hover {
@@ -173,7 +181,9 @@
         }
 
         header.scrolled .header-title span {
-            display: none;
+            max-height: 0;
+            margin-top: 0;
+            opacity: 0;
         }
 
         /* ESCONDER LOGO SEGURO EN SCROLL MOBILE */
@@ -515,6 +525,10 @@
 
         @media(max-width: 768px) {
 
+            body {
+                padding-top: 120px;
+            }
+
             header {
                 padding: 10px 0;
             }
@@ -550,6 +564,7 @@
                 right: auto;
                 top: auto;
                 transform: none;
+                max-height: 36px;
             }
 
             .header-logo img {
@@ -571,13 +586,19 @@
             }
 
             header.scrolled .header-title span {
-                display: none;
+                max-height: 0;
+                margin-top: 0;
+                opacity: 0;
             }
 
             /* OCULTAR LOGO SEGURO */
 
             header.scrolled .header-logo {
-                display: none;
+                max-height: 0;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-4px) scale(0.96);
             }
 
             .hero-image img {
@@ -960,16 +981,28 @@
         // HEADER COMPACTO
 
         const header = document.querySelector('header');
+        let headerScrollTicking = false;
+        let headerIsScrolled = false;
 
-        window.addEventListener('scroll', () => {
+        const updateHeaderState = () => {
+            const shouldBeScrolled = window.scrollY > 50;
 
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            if (shouldBeScrolled !== headerIsScrolled) {
+                headerIsScrolled = shouldBeScrolled;
+                header.classList.toggle('scrolled', shouldBeScrolled);
             }
 
-        });
+            headerScrollTicking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!headerScrollTicking) {
+                window.requestAnimationFrame(updateHeaderState);
+                headerScrollTicking = true;
+            }
+        }, { passive: true });
+
+        updateHeaderState();
 
 
         // CARRUCEL FOTOS MASCOTAS
