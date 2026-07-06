@@ -1,0 +1,12 @@
+  fielpet-web:
+    image: alesanabra/fielpet-web:1.0.0
+    container_name: fielpet
+    restart: unless-stopped
+    ports:
+     - '4000:4000'
+    volumes:
+     - /etc/localtime:/etc/localtime:ro
+     - /etc/timezone:/etc/timezone:ro
+    environment:
+     PUERTO: 4000
+     NOMBRE: Mascotas
